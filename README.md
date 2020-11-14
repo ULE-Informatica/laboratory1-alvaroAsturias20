@@ -53,5 +53,5 @@ Corección de errores en el codigo:
             char analitic3[100]="аналитик";
             int size_array1 = sizeof("аналитик");/*Pondría sizeof para guardar el tamaño del array en la variable size_array1*/
             int size_array2 = sizeof(analitic3);/*De esta forma, guardo el tamaño del array de analitic3 en lugar del 100 y asi ya le doy uso al analitic3 colcándolo encima*/
-            printf ("%d",size_array1);/*Como size_array1 no se utiliza, aqui deberia imprimirse el valor de la longitud size_array1, para ello la sentencia debería ser printf               ("%d",size_array1)*/
+            printf ("%d",size_array1);/*Como size_array1 no se utiliza, aqui deberia imprimirse el valor de la longitud size_array1, para ello la sentencia debería ser printf    ("%d",size_array1)*/
             printf ("%d",size_array2);/*Como size_array2 no se utiliza, aqui deberia imprimirse el valor de la longitud size_array2, para ello la sentencia debería ser printf ("%d",size_array2)*/
