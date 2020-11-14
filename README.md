@@ -48,7 +48,7 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 Corección de errores en el codigo:
 *************************************************************************************************
 -En la función gets_example_func-->Al tratarse de una funcion void, no retorna nada por lo que suprimiendo el return ya no obtendriamos un warning, tambien se puede añadir un exit(0) para que se detenga la ejecución el programa, sería lo mas correcto.
--En la función get_y_or_n ---> Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n' en la variable char response[8], por lo que con un [1] se reduce la memoria reservada. Además, el método gets no es seguro pues se puede producir un desbordamiento de buffer, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin); al indicar la longitud, se previene el desbordamiento de buffer.
+-En la función get_y_or_n ---> Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n' en la variable char response[8], por lo que con un [2] se reduce la memoria reservada. Además, el método gets no es seguro pues se puede producir un desbordamiento de buffer, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin); al indicar la longitud, se previene el desbordamiento de buffer.
 -En el main:
             char analitic3[100]="аналитик";
             int size_array1 = sizeof("аналитик");/*Pondría sizeof para guardar el tamaño del array en la variable size_array1*/
