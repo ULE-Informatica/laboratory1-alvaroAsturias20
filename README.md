@@ -117,9 +117,8 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
             printf ("%d",size_array2);/*Como size_array2 no se utiliza, aqui deberia imprimirse el valor de la longitud size_array2, para ello la sentencia debería ser printf ("%d",size_array2)*/
 ```
 ##Reglas CMU-Cert que se incumplen en el código
-```
+
 - STR31-C --> Línea 51
 - MSC34-C --> Linea 51
 - MEM35-C. Always allocate sufficient memory for an object. --> Linea 17,18,66 
 
-```
