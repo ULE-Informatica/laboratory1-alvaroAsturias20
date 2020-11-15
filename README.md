@@ -1,6 +1,7 @@
 # dps-lab-1
 Laboratory 1
-
+En el archivo exampleStrings_comentado.c se detallan los errores y arreglos del código sin modificar el original.
+En el archivo exampleStrings_sinErrores.c se muestra el código editado y que compila sin errores tanto para el estandar 99 como el 11.
 ## Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
 
 
