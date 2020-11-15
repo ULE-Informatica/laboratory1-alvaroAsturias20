@@ -5,7 +5,7 @@ Laboratory 1
 
 
 ## Salida de la compilación con gcc -Wall, sin estándares
-
+### 
 exampleStrings.c: In function 'gets_example_func':
 exampleStrings.c:32:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
    32 |         return 1;
