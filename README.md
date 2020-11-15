@@ -147,7 +147,7 @@ En este apartado se comentan las diferentes salidas que presentan las diferentes
    - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
    - En el main, error en la declaración de s2.
    - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
-- Compilación gcc con estándar 11: Igual que con es estándar 99
+- Compilación gcc con estándar 11: Igual que con el estándar 99
    - En la declaracion de const char* s1 se obtienen 4 errores y 2 warning.
    - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
    - En el main, error en la declaración de s2.
