@@ -106,7 +106,7 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 ```
-## Salida de la compilación con gcc -Wall -std=c99
+## Salida de la compilación con g++ -Wall -std=c99
 La salida con el estándar 11 es exactamente igual que esta salida.
 ```
 cc1plus.exe: warning: command line option '-std=c99' is valid for C/ObjC but not for C++
