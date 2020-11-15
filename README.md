@@ -151,7 +151,7 @@ En este apartado se comentan las diferentes salidas que presentan las diferentes
    - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
    - En el main, error en la declaración de s2.
    - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
--Compilación con g++ sin estándares:
+- Compilación con g++ sin estándares:
    - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
    - En el main, se obtiene un warning por intentar modificar un string constant en un puntero a caracteres. --> char *ptr_char  = "new string literal";
    - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
