@@ -4,6 +4,25 @@ Laboratory 1
 Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
 *************************************************************************************************
 *************************************************************************************************
+Salida de la compilación con gcc -Wall, sin estándares
+*************************************************************************************************
+exampleStrings.c: In function 'gets_example_func':
+exampleStrings.c:32:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   32 |         return 1;
+      |                ^
+exampleStrings.c:28:6: note: declared here
+   28 | void gets_example_func(void) {
+      |      ^~~~~~~~~~~~~~~~~
+exampleStrings.c: In function 'main':
+exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
+   73 |     char analitic3[100]="ð░ð¢ð░ð╗ð©Ð          ^~~~~~~~~
+exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable]
+   69 |     int size_array2 = 100;
+      |         ^~~~~~~~~~~
+exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
+   68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
+
+*************************************************************************************************
 Salida de la compilación con gcc -Wall -std=c99
 *************************************************************************************************
 exampleStrings.c:22:19: warning: missing terminating " character
