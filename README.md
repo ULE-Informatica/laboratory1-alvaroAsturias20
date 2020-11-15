@@ -2,7 +2,7 @@
 
 En el archivo exampleStrings_comentado.c se detallan los errores y arreglos del código sin modificar el original.
 En el archivo exampleStrings_sinErrores.c se muestra el código editado y que compila sin errores tanto para el estandar 99 como el 11.
-## Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
+- Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
 
 
 ## Salida de la compilación con gcc -Wall, sin estándares
@@ -106,10 +106,8 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 ```
-## Salida de la compilación con g++ -Wall -std=c99
-La salida con el estándar 11 es exactamente igual que esta salida.
+## Salida de la compilación con g++ -Wall
 ```
-cc1plus.exe: warning: command line option '-std=c99' is valid for C/ObjC but not for C++
 exampleStrings.c: In function 'void gets_example_func()':
 exampleStrings.c:32:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
    32 |         return 1;
@@ -137,3 +135,23 @@ exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
 - ARR32-C  Ensure size arguments for variable length arrays are in a valid --> Linea 48
 
 ## Análisis de los resultados
+Para la edición del programa se ha decidido realizar los cambios en base a la compilación con gcc y el estándar 99.
+
+En este apartado se comentan las diferentes salidas que presentan las diferentes compilaciones.
+- Compilación con gcc sin estándares: 
+   - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
+   - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'
+- Compilación gcc con estándar 99:
+   - En la declaracion de const char* s1 se obtienen 4 errores y 2 warning.
+   - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
+   - En el main, error en la declaración de s2.
+   - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
+- Compilación gcc con estándar 11: Igual que con es estándar 99
+   - En la declaracion de const char* s1 se obtienen 4 errores y 2 warning.
+   - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
+   - En el main, error en la declaración de s2.
+   - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
+-Compilación con g++ sin estándares:
+   - En la función 'gets_example_func' se obtiene un warning por que retorna un 1 cuando la función es de tipo void.
+   - En el main, se obtiene un warning por intentar modificar un string constant en un puntero a caracteres. --> char *ptr_char  = "new string literal";
+   - En el main, se obtienen tres warning por tener sin utilizar tres variables--> 'analitic3', 'size_array1' y 'size_array2'.
