@@ -5,7 +5,7 @@ Laboratory 1
 
 
 ## Salida de la compilación con gcc -Wall, sin estándares
-### 
+```
 exampleStrings.c: In function 'gets_example_func':
 exampleStrings.c:32:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
    32 |         return 1;
@@ -22,9 +22,9 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 
-###
+```
 ## Salida de la compilación con gcc -Wall -std=c99
-
+```
 exampleStrings.c:22:19: warning: missing terminating " character
    22 | const char* s1 = R"foo(
       |                   ^
@@ -63,9 +63,9 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
       |         ^~~~~~~~~~~
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
-
+```
 ## Salida de la compilación con gcc -Wall -std=c11
-
+```
 exampleStrings.c:22:19: warning: missing terminating " character
    22 | const char* s1 = R"foo(
       |                   ^
@@ -104,7 +104,7 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
       |         ^~~~~~~~~~~
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
-
+```
 # Corrección de errores en el código:
 
 -En la función gets_example_func-->Al tratarse de una funcion void, no retorna nada por lo que suprimiendo el return ya no obtendriamos un warning, tambien se puede añadir un exit(0) para que se detenga la ejecución el programa, sería lo mas correcto.
