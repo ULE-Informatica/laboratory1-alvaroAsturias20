@@ -122,3 +122,4 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 - MSC34-C --> Linea 51
 - MEM35-C. Always allocate sufficient memory for an object. --> Linea 17,18,66 
 
+## Análisis de los resultados
