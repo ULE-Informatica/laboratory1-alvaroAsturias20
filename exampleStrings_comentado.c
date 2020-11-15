@@ -37,7 +37,7 @@ void get_y_or_n(void) {
 	char response[8];/*Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n', por lo que con un [2] se reduce la memoria reservada*/
 
 	printf("Continue? [y] n: ");  
-	gets(response);/*gets no es seguro pues se puede producir un desbordamiento de buffer, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin);
+	gets(response);/*gets no es seguro pues se puede producir un desbordamiento de buffer y además está en desuso, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin);
 	al indicar la longitud, se previene el desbordamiento de buffer*/
 
 	if (response[0] == 'n') 
@@ -55,9 +55,9 @@ int main(int argc, char *argv[])
     char array4[16];
     char array5 []  = "01234567890123456";
     char *ptr_char  = "new string literal";
-	char analitic3[100]="аналитик";
+    char analitic3[100]="аналитик";
     int size_array1 = strlen("аналитик");/*Pondría sizeof para guardar el tamaño del array en la variable size_array1*/
-    int size_array2 = sizeof(analitic3);/*Des esta forma, guardo el tamaño del array de analitic3 en lugar del*/
+    int size_array2 = sizeof(analitic3);/*De esta forma, guardo el tamaño del array de analitic3 en lugar del 100*/
     
    // char analitic1[size_array1]="аналитик";
    // char analitic2[size_array2]="аналитик";
@@ -75,9 +75,9 @@ int main(int argc, char *argv[])
     
     get_y_or_n();
 
-    printf ("%d",size_array1);/*Aqui podría imprimirse el valor de la longitud size_array1, para ello la sentencia debería ser printf ("%d",size_array1)*/
+    printf ("%s",array1);/*Aqui podría imprimirse el valor de la longitud size_array1, para ello la sentencia debería ser printf ("%d",size_array1)*/
     printf ("\n");
-    printf ("%d",size_array2);/*Aqui podría imprimirse el valor de la longitud size_array2, para ello la sentencia debería ser printf ("%d",size_array2)*/
+    printf ("%s",array2);/*Aqui podría imprimirse el valor de la longitud size_array2, para ello la sentencia debería ser printf ("%d",size_array2)*/
     printf ("\n");
  
     puts (s1);
