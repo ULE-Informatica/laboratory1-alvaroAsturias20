@@ -107,6 +107,7 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 ```
 ## Salida de la compilación con g++ -Wall
+En este caso solo se incluye la salida sin estándares ya que tanto para el estandar 99 como para el 11 la salida es la misma que la que se ve a continuación.
 ```
 exampleStrings.c: In function 'void gets_example_func()':
 exampleStrings.c:32:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
