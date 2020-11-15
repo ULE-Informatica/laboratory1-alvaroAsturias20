@@ -1,10 +1,10 @@
 # dps-lab-1
 Laboratory 1
 *************************************************************************************************
-Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
+## Versión utilizada de gcc --> gcc (MinGW.org GCC Build-2) 9.2.0
 *************************************************************************************************
 *************************************************************************************************
-Salida de la compilación con gcc -Wall, sin estándares
+## Salida de la compilación con gcc -Wall, sin estándares
 *************************************************************************************************
 exampleStrings.c: In function 'gets_example_func':
 exampleStrings.c:32:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
@@ -23,7 +23,7 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 
 *************************************************************************************************
-Salida de la compilación con gcc -Wall -std=c99
+## Salida de la compilación con gcc -Wall -std=c99
 *************************************************************************************************
 exampleStrings.c:22:19: warning: missing terminating " character
    22 | const char* s1 = R"foo(
@@ -64,7 +64,7 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 *************************************************************************************************
-Salida de la compilación con gcc -Wall -std=c11
+## Salida de la compilación con gcc -Wall -std=c11
 *************************************************************************************************
 exampleStrings.c:22:19: warning: missing terminating " character
    22 | const char* s1 = R"foo(
@@ -105,7 +105,7 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 *************************************************************************************************
-Corrección de errores en el código:
+# Corrección de errores en el código:
 *************************************************************************************************
 -En la función gets_example_func-->Al tratarse de una funcion void, no retorna nada por lo que suprimiendo el return ya no obtendriamos un warning, tambien se puede añadir un exit(0) para que se detenga la ejecución el programa, sería lo mas correcto.
 -En la función get_y_or_n ---> Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n' en la variable char response[8], por lo que con un [2] se reduce la memoria reservada. Además, el método gets no es seguro pues se puede producir un desbordamiento de buffer, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin); al indicar la longitud, se previene el desbordamiento de buffer.
