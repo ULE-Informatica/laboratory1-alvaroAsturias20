@@ -133,7 +133,7 @@ exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
 - MEM35-C. Always allocate sufficient memory for an object. --> Linea 17,18 y 66 
 - STR30-C. Do not attempt to modify string literals ---> Linea 67, 101
 - ARR02-C. Explicitly specify array bounds, even if implicitly defined by an initializer --> Linea 18
-- ARR32-C  Ensure size arguments for variable length arrays are in a valid --> Linea 48
+- ARR32-C  Ensure size arguments for variable length arrays are in a valid --> Linea 48, 73
 
 ## Análisis de los resultados
 Para la edición del programa se ha decidido realizar los cambios en base a la compilación con gcc y el estándar 99.
