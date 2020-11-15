@@ -34,11 +34,13 @@ const char *get_dirname(const char *pathname) {
  
 
 void get_y_or_n(void) {  
-	char response[8];/*Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n', por lo que con un [2] se reduce la memoria reservada*/
+	char response[8];/*Se esta reservando memoria de más, pues solo se va a almacenar 1 caracter 'y' or 'n', por lo que con un [2] se reduce la memoria reservada. Reservamos
+	para 2 posiciones porque fgets añade un salto de linea al final, de modo que hay que reservar una posción más de la esperada. Además, dicha posición debería 
+	de eliminarse después con la linea --> cadena[strcspn(cadena, "\r\n")] = 0;*/
 
 	printf("Continue? [y] n: ");  
 	gets(response);/*gets no es seguro pues se puede producir un desbordamiento de buffer y además está en desuso, por lo que se utiliza fgets para evitar esto fgets(response,sizeof(response),stdin);
-	al indicar la longitud, se previene el desbordamiento de buffer*/
+	al indicar la longitud, se previene el desbordamiento de buffer ya que fgets solo leerá la longitud que le indiques*/
 
 	if (response[0] == 'n') 
 		exit(0);  
