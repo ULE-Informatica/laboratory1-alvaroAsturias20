@@ -22,7 +22,7 @@ exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable
 exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 
-
+###
 ## Salida de la compilación con gcc -Wall -std=c99
 
 exampleStrings.c:22:19: warning: missing terminating " character
