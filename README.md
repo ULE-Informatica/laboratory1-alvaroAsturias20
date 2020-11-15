@@ -139,8 +139,11 @@ exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
 ```
 ## Reglas CMU-Cert que se incumplen en el código
 
-- STR31-C --> Línea 51
-- MSC34-C --> Linea 51
-- MEM35-C. Always allocate sufficient memory for an object. --> Linea 17,18,66 
+- STR31-C Guarantee that storage for strings has sufficient space for character data and the null terminator --> Línea 51
+- MSC34-C Do not use deprecated or obsoloescent functions --> Linea 51
+- MEM35-C. Always allocate sufficient memory for an object. --> Linea 17,18 y 66 
+- STR30-C. Do not attempt to modify string literals ---> Linea 101
+- ARR02-C. Explicitly specify array bounds, even if implicitly defined by an initializer --> Linea 18
+- ARR32-C  Ensure size arguments for variable length arrays are in a valid --> Linea 48
 
 ## Análisis de los resultados
